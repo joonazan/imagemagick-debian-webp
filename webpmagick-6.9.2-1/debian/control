@@ -1,0 +1,12 @@
+Source: webpmagick
+Maintainer: Joonatan Saarhelo <joon.saar@gmail.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends:
+
+Package: webpmagick
+Architecture: any
+Depends: ${webp:Depends}
+Description: ImageMagick with webp and OpenCL support.
+ Made for go image resizing and caching service.

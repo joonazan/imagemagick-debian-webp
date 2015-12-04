@@ -1,0 +1,10 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: source package webpmagick
+dpkg-buildpackage: source version 6.9.2-1
+dpkg-buildpackage: source distribution UNRELEASED
+dpkg-buildpackage: source changed by MAINTAINER <joonazan@localhost.localdomain>
+ dpkg-source --before-build webpmagick-6.9.2-1
+dpkg-buildpackage: host architecture i386
+dpkg-checkbuilddeps: Unmet build dependencies: build-essential:native
+dpkg-buildpackage: warning: build dependencies/conflicts unsatisfied; aborting
+dpkg-buildpackage: warning: (Use -d flag to override.)
