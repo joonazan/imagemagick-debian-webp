@@ -5,6 +5,108 @@ dpkg-buildpackage: source distribution UNRELEASED
 dpkg-buildpackage: source changed by MAINTAINER <joonazan@localhost.localdomain>
  dpkg-source --before-build webpmagick-6.9.2-1
 dpkg-buildpackage: host architecture i386
-dpkg-checkbuilddeps: Unmet build dependencies: build-essential:native
-dpkg-buildpackage: warning: build dependencies/conflicts unsatisfied; aborting
-dpkg-buildpackage: warning: (Use -d flag to override.)
+ fakeroot debian/rules clean
+dh clean
+   dh_testdir
+   dh_auto_clean
+make[1]: Entering directory `/home/keron/Documents/imagemagick-debian-webp/webpmagick-6.9.2-1'
+ rm -f utilities/animate utilities/compare utilities/composite utilities/conjure utilities/convert utilities/display utilities/identify utilities/import utilities/mogrify utilities/montage utilities/stream
+ rm -f tests/validate tests/drawtest tests/wandtest Magick++/demo/analyze Magick++/demo/button Magick++/demo/demo Magick++/demo/detrans Magick++/demo/flip Magick++/demo/gravity Magick++/demo/piddle Magick++/demo/shapes Magick++/demo/zoom Magick++/tests/appendImages Magick++/tests/attributes Magick++/tests/averageImages Magick++/tests/coalesceImages Magick++/tests/coderInfo Magick++/tests/color Magick++/tests/colorHistogram Magick++/tests/exceptions Magick++/tests/montageImages Magick++/tests/morphImages Magick++/tests/readWriteBlob Magick++/tests/readWriteImages
+test -z "" || rm -f 
+test -z "" || rm -f 
+test -z " Magick++/demo/*_out* Magick++/demo/ir.out Magick++/tests/colorHistogram.txt Magick++/tests/testmagick_anim_out.miff Magick++/tests/ir.out  tests/*_out.*" || rm -f  Magick++/demo/*_out* Magick++/demo/ir.out Magick++/tests/colorHistogram.txt Magick++/tests/testmagick_anim_out.miff Magick++/tests/ir.out  tests/*_out.*
+test -z "magick/libMagickCore-6.Q16.la wand/libMagickWand-6.Q16.la Magick++/lib/libMagick++-6.Q16.la" || rm -f magick/libMagickCore-6.Q16.la wand/libMagickWand-6.Q16.la Magick++/lib/libMagick++-6.Q16.la
+rm -f Magick++/lib/so_locations magick/so_locations wand/so_locations
+rm -rf .libs _libs
+rm -rf Magick++/demo/.libs Magick++/demo/_libs
+rm -rf Magick++/lib/.libs Magick++/lib/_libs
+rm -rf Magick++/tests/.libs Magick++/tests/_libs
+rm -rf coders/.libs coders/_libs
+rm -rf filters/.libs filters/_libs
+rm -rf magick/.libs magick/_libs
+rm -rf tests/.libs tests/_libs
+rm -rf utilities/.libs utilities/_libs
+rm -rf wand/.libs wand/_libs
+test -z "" || rm -f 
+rm -f *.o
+rm -f Magick++/demo/*.o
+rm -f Magick++/lib/*.o
+rm -f Magick++/lib/*.lo
+rm -f Magick++/tests/*.o
+rm -f coders/*.o
+rm -f coders/*.lo
+rm -f filters/*.o
+rm -f filters/*.lo
+rm -f magick/*.o
+rm -f magick/*.lo
+rm -f tests/*.o
+rm -f utilities/*.o
+rm -f wand/*.o
+rm -f wand/*.lo
+test -z "" || rm -f 
+test -z "tests/cli-pipe.log tests/cli-colorspace.log tests/validate-colorspace.log tests/validate-compare.log tests/validate-composite.log tests/validate-convert.log tests/validate-formats-disk.log tests/validate-formats-map.log tests/validate-formats-memory.log tests/validate-identify.log tests/validate-import.log tests/validate-montage.log tests/validate-stream.log tests/drawtest.log tests/wandtest.log Magick++/tests/tests.log Magick++/demo/demos.log" || rm -f tests/cli-pipe.log tests/cli-colorspace.log tests/validate-colorspace.log tests/validate-compare.log tests/validate-composite.log tests/validate-convert.log tests/validate-formats-disk.log tests/validate-formats-map.log tests/validate-formats-memory.log tests/validate-identify.log tests/validate-import.log tests/validate-montage.log tests/validate-stream.log tests/drawtest.log tests/wandtest.log Magick++/tests/tests.log Magick++/demo/demos.log
+test -z "tests/cli-pipe.trs tests/cli-colorspace.trs tests/validate-colorspace.trs tests/validate-compare.trs tests/validate-composite.trs tests/validate-convert.trs tests/validate-formats-disk.trs tests/validate-formats-map.trs tests/validate-formats-memory.trs tests/validate-identify.trs tests/validate-import.trs tests/validate-montage.trs tests/validate-stream.trs tests/drawtest.trs tests/wandtest.trs Magick++/tests/tests.trs Magick++/demo/demos.trs" || rm -f tests/cli-pipe.trs tests/cli-colorspace.trs tests/validate-colorspace.trs tests/validate-compare.trs tests/validate-composite.trs tests/validate-convert.trs tests/validate-formats-disk.trs tests/validate-formats-map.trs tests/validate-formats-memory.trs tests/validate-identify.trs tests/validate-import.trs tests/validate-montage.trs tests/validate-stream.trs tests/drawtest.trs tests/wandtest.trs Magick++/tests/tests.trs Magick++/demo/demos.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f *.lo
+rm -f *.tab.c
+test -z "common.shi config/configure.xml config/delegates.xml config/ImageMagick.rdf config/MagickCore.dox config/MagickWand.dox config/Magick++.dox config/type-apple.xml config/type-dejavu.xml config/type-ghostscript.xml config/type-windows.xml config/type.xml ImageMagick.spec Magick++/bin/Magick++-config magick/ImageMagick.pc Magick++/lib/ImageMagick++.pc Magick++/lib/Magick++.pc magick/Magick-config magick/MagickCore-config magick/MagickCore.pc magick/version.h magick.sh PerlMagick/check.sh PerlMagick/default/Magick.pm PerlMagick/Makefile.PL PerlMagick/default/Makefile.PL PerlMagick/quantum/Makefile.PL PerlMagick/quantum/quantum.pm PerlMagick/quantum/quantum.xs PerlMagick/quantum/typemap utilities/animate.1 utilities/compare.1 utilities/composite.1 utilities/conjure.1 utilities/convert.1 utilities/display.1 utilities/identify.1 utilities/ImageMagick.1 utilities/import.1 utilities/mogrify.1 utilities/montage.1 utilities/stream.1 wand/MagickWand-config wand/MagickWand.pc wand/Wand-config wand/Wand.pc" || rm -f common.shi config/configure.xml config/delegates.xml config/ImageMagick.rdf config/MagickCore.dox config/MagickWand.dox config/Magick++.dox config/type-apple.xml config/type-dejavu.xml config/type-ghostscript.xml config/type-windows.xml config/type.xml ImageMagick.spec Magick++/bin/Magick++-config magick/ImageMagick.pc Magick++/lib/ImageMagick++.pc Magick++/lib/Magick++.pc magick/Magick-config magick/MagickCore-config magick/MagickCore.pc magick/version.h magick.sh PerlMagick/check.sh PerlMagick/default/Magick.pm PerlMagick/Makefile.PL PerlMagick/default/Makefile.PL PerlMagick/quantum/Makefile.PL PerlMagick/quantum/quantum.pm PerlMagick/quantum/quantum.xs PerlMagick/quantum/typemap utilities/animate.1 utilities/compare.1 utilities/composite.1 utilities/conjure.1 utilities/convert.1 utilities/display.1 utilities/identify.1 utilities/ImageMagick.1 utilities/import.1 utilities/mogrify.1 utilities/montage.1 utilities/stream.1 wand/MagickWand-config wand/MagickWand.pc wand/Wand-config wand/Wand.pc
+test . = "." || test -z "" || rm -f 
+rm -f Magick++/demo/.deps/.dirstamp
+rm -f Magick++/demo/.dirstamp
+rm -f Magick++/lib/.deps/.dirstamp
+rm -f Magick++/lib/.dirstamp
+rm -f Magick++/tests/.deps/.dirstamp
+rm -f Magick++/tests/.dirstamp
+rm -f coders/.deps/.dirstamp
+rm -f coders/.dirstamp
+rm -f filters/.deps/.dirstamp
+rm -f filters/.dirstamp
+rm -f magick/.deps/.dirstamp
+rm -f magick/.dirstamp
+rm -f tests/.deps/.dirstamp
+rm -f tests/.dirstamp
+rm -f utilities/.deps/.dirstamp
+rm -f utilities/.dirstamp
+rm -f wand/.deps/.dirstamp
+rm -f wand/.dirstamp
+test -z "_configs.sed magick/magick-baseconfig.h" || rm -f _configs.sed magick/magick-baseconfig.h
+rm -f config/config.h config/stamp-h1
+rm -f libtool config.lt
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f cscope.out cscope.in.out cscope.po.out cscope.files
+rm -f config.status config.cache config.log configure.lineno config.status.lineno
+rm -rf Magick++/demo/.deps Magick++/lib/.deps Magick++/tests/.deps coders/.deps filters/.deps magick/.deps tests/.deps utilities/.deps wand/.deps
+rm -f Makefile
+make[1]: Leaving directory `/home/keron/Documents/imagemagick-debian-webp/webpmagick-6.9.2-1'
+   dh_clean
+ dpkg-source -b webpmagick-6.9.2-1
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building webpmagick using existing ./webpmagick_6.9.2.orig.tar.gz
+dpkg-source: warning: ignoring deletion of file utilities/compare.1
+dpkg-source: warning: ignoring deletion of file utilities/import.1
+dpkg-source: warning: ignoring deletion of file utilities/stream.1
+dpkg-source: warning: ignoring deletion of file utilities/convert.1
+dpkg-source: warning: ignoring deletion of file utilities/display.1
+dpkg-source: warning: ignoring deletion of file utilities/montage.1
+dpkg-source: warning: ignoring deletion of file utilities/ImageMagick.1
+dpkg-source: warning: ignoring deletion of file utilities/animate.1
+dpkg-source: warning: ignoring deletion of file utilities/identify.1
+dpkg-source: warning: ignoring deletion of file utilities/conjure.1
+dpkg-source: warning: ignoring deletion of file utilities/composite.1
+dpkg-source: warning: ignoring deletion of file utilities/mogrify.1
+dpkg-source: warning: ignoring deletion of file PerlMagick/Makefile.PL
+dpkg-source: warning: ignoring deletion of file PerlMagick/check.sh
+dpkg-source: warning: ignoring deletion of file PerlMagick/quantum/Makefile.PL
+dpkg-source: warning: ignoring deletion of file PerlMagick/quantum/quantum.xs
+dpkg-source: warning: ignoring deletion of file PerlMagick/quantum/typemap
+dpkg-source: warning: ignoring deletion of file PerlMagick/quantum/quantum.pm
+dpkg-source: warning: ignoring deletion of file PerlMagick/default/Makefile.PL
+dpkg-source: warning: ignoring deletion of file PerlMagick/default/Magick.pm
+dpkg-source: warning: ignoring deletion of file magick/magick-baseconfig.h
+dpkg-source: warning: ignoring deletion of file magick/version.h
+dpkg-source: warning: newly created empty file 'local.exp' will not be represented in diff
+dpkg-source: info: local changes detected, the modified files are:
+ webpmagick-6.9.2-1/configure
+dpkg-source: error: aborting due to unexpected upstream changes, see /tmp/webpmagick_6.9.2-1.diff.RTZ9T8
+dpkg-source: info: you can integrate the local changes with dpkg-source --commit
+dpkg-buildpackage: error: dpkg-source -b webpmagick-6.9.2-1 gave error exit status 2

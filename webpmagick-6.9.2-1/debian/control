@@ -3,7 +3,7 @@ Maintainer: Joonatan Saarhelo <joon.saar@gmail.com>
 Section: misc
 Priority: optional
 Standards-Version: 3.9.2
-Build-Depends:
+Build-Depends: debhelper (>= 9), autoconf
 
 Package: webpmagick
 Architecture: any
